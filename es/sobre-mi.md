@@ -28,7 +28,7 @@ Un lugar personal, no solo profesional. Hay proyectos y publicaciones, pero tamb
 
 ### Trayectoria
 
-- **2025 – presente** · Doctorado en Imágenes Médicas, Université Paris-Saclay (BioMaps), doctorado industrial con GE HealthCare. Tesis: *Imágenes espectrales de rayos X de mama para la caracterización de lesiones*.
+- **2025 – presente** · Doctorado en Imágenes Médicas, Université Paris-Saclay (BioMaps), doctorado industrial con GE HealthCare. Tesis: [*Imágenes espectrales de rayos X de mama para la caracterización de lesiones*]({{ site.data.profile.theses }}).
 - **2024** · Práctica de investigación en GE HealthCare: un simulador basado en física de mamografía de doble energía (más de 40.000 adquisiciones sintéticas) y una CNN para caracterizar lesiones (AUC de 0,99 con datos simulados). De ahí nació el doctorado.
 - **2022 – 2024** · Título de Ingeniero (Maestría) en Procesamiento de Señales e Inteligencia Artificial, ENSEA. 5.º puesto de 28; tesis de maestría con nota de 18/20 y mención de honor.
 - **2023** · Práctica de investigación de verano, de tres meses, en el laboratorio CNRS ETIS: [aumento de datos con GANs]({{ '/es/proyectos/gan-patrones-alas/' | relative_url }}) para identificar moscas tsetsé a partir de imágenes de sus alas.

@@ -50,7 +50,7 @@
   "alumniOf": [{% for a in p.alumni_of %}{"@type": "CollegeOrUniversity", "name": {{ a | jsonify }}}{% unless forloop.last %}, {% endunless %}{% endfor %}],
   "knowsAbout": {{ p.knows_about | jsonify }},
   "knowsLanguage": ["es", "en", "fr"],
-  "sameAs": [{{ p.github | jsonify }}]
+  "sameAs": [{{ p.github | jsonify }}{% if p.linkedin %}, {{ p.linkedin | jsonify }}{% endif %}{% if p.theses %}, {{ p.theses | jsonify }}{% endif %}]
 }{% endcapture %}
 {% if page.section == 'home' %}<script type="application/ld+json">
 {"@context": "https://schema.org", "@graph": [

@@ -28,7 +28,7 @@ A personal place, not only a professional one. There are projects and papers, bu
 
 ### Path
 
-- **2025 – present** · PhD in Medical Imaging, Université Paris-Saclay (BioMaps), an industrial PhD with GE HealthCare. Thesis: *Spectral X-ray Breast Imaging for Lesion Characterization*.
+- **2025 – present** · PhD in Medical Imaging, Université Paris-Saclay (BioMaps), an industrial PhD with GE HealthCare. Thesis: [*Spectral X-ray Breast Imaging for Lesion Characterization*]({{ site.data.profile.theses }}).
 - **2024** · Research internship at GE HealthCare: a physics-based simulator for dual-energy mammography (more than 40,000 synthetic acquisitions) and a CNN for lesion characterization (0.99 AUC on simulated data). It led to the PhD.
 - **2022 – 2024** · Engineering diploma (Master's) in Signal Processing and Artificial Intelligence, ENSEA. Ranked 5 of 28; master's thesis graded 18/20 with highest honours.
 - **2023** · Three-month summer research internship at the CNRS ETIS laboratory: [GAN-based data augmentation]({{ '/projects/wing-pattern-gans/' | relative_url }}) for identifying tsetse flies from wing images.

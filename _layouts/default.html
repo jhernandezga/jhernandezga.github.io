@@ -31,7 +31,7 @@
     </div>
   {% endfor %}
   </nav>
-  <div class="sidebar-bottom"><a href="{{ site.data.profile.github }}">GitHub <span aria-hidden="true">↗</span></a>{% if site.data.profile.medium != '' %}<a href="{{ site.data.profile.medium }}">Medium <span aria-hidden="true">↗</span></a>{% endif %}<p>{{ t.footer }}</p></div>
+  <div class="sidebar-bottom">{% if site.data.profile.linkedin %}<a href="{{ site.data.profile.linkedin }}" rel="me">LinkedIn <span aria-hidden="true">↗</span></a>{% endif %}<a href="{{ site.data.profile.github }}" rel="me">GitHub <span aria-hidden="true">↗</span></a>{% if site.data.profile.theses %}<a href="{{ site.data.profile.theses }}" rel="me">theses.fr <span aria-hidden="true">↗</span></a>{% endif %}{% if site.data.profile.medium != '' %}<a href="{{ site.data.profile.medium }}">Medium <span aria-hidden="true">↗</span></a>{% endif %}<p>{{ t.footer }}</p></div>
 </aside>
 <div class="workspace">
   <header class="topbar">
