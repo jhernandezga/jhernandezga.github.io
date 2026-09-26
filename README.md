@@ -1,6 +1,4 @@
-# Jorge Hernández Galeano — personal website
-
-A bilingual personal site for projects, publications, articles, and a knowledge garden. English lives at `/`; Spanish lives at `/es/`.
+This is the source code of a personal website where I'll upload academic projects, personal ideas etc....
 
 **Website:** https://jhernandezga.github.io
 
@@ -55,4 +53,9 @@ Then open http://localhost:4000. Use `bundle exec jekyll build` for a production
 - `templates/`: English and Spanish starter content, unpublished by default.
 - `scripts/New-Entry.ps1`: optional shortcut for creating a new entry.
 
-The public introduction follows the existing profile copy. No projects, publications, qualifications, or results have been invented.
+
+Copyright © 2026 Jorge Andrés Hernández Galeano.
+
+The source code in this repository may be used only for noncommercial purposes under the terms of the PolyForm Noncommercial License 1.0.0.
+
+Unless explicitly stated otherwise, the text, articles, images, research materials, and other original content contained in this repository may not be reproduced, redistributed, modified, or used commercially without prior written permission from the copyright holder.
