@@ -4,7 +4,7 @@ url: "https://jhernandezga.github.io"
 baseurl: ""
 lang: en
 # Paste the code from Google Search Console (HTML tag method) to verify ownership.
-# google_site_verification: ""
+google_site_verification: a6UtIgs8xsQBFERWzQ05hpnh3WktPUMyijuusrK-Kho
 markdown: kramdown
 permalink: pretty
 collections:
