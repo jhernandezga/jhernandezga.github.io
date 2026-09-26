@@ -1,6 +1,6 @@
 ---
 title: "Solidaria App: a mobile network for mutual aid"
-description: "An Android app built with Flutter and Firebase for the Object-Oriented Programming course at Universidad Nacional de Colombia, connecting people in need with people willing to help."
+description: "An Android app, built with Flutter and Firebase, that connects people in need with people willing to help. My project for the Object-Oriented Programming course at Universidad Nacional de Colombia."
 lang: en
 date: 2020-07-05
 permalink: /projects/solidaria-app/
@@ -10,7 +10,9 @@ published: true
 repository: "https://github.com/jhernandezga/Proyecto-POO-Economia-Solidaria"
 ---
 
-The final project of the Object-Oriented Programming course at Universidad Nacional de Colombia (first semester of 2020): an Android app, written in Dart with Flutter and backed by Firebase, that works as a small social network for the *economía solidaria*, the solidarity economy. The project poster is in the [repository](https://github.com/jhernandezga/Proyecto-POO-Economia-Solidaria).
+In the Object-Oriented Programming course at Universidad Nacional de Colombia (first semester of 2020), each of us had to propose and develop a project that applied object-oriented programming to help with a social problem. The problem, the idea and the way to build it were up to us.
+
+I chose to work on how help was reaching people during the first COVID-19 lockdown, and built Solidaria App: an Android app, written in Dart with Flutter and backed by Firebase, that works as a small social network for the *economía solidaria*, the solidarity economy. The project poster is in the [repository](https://github.com/jhernandezga/Proyecto-POO-Economia-Solidaria).
 
 <figure>
   <img src="{{ '/assets/images/projects/solidaria/screens.jpg' | relative_url }}" alt="Four phone screenshots: a feed of help offers, a feed of requests, a carousel of shared experiences, and a chat conversation." loading="lazy">
@@ -39,7 +41,7 @@ A single platform where people offering help and people who need it can find eac
 
 ## Object-oriented design
 
-Since this was the point of the course, the app started from a class model:
+The app started from a class model, designed before any of the interface:
 
 - **`User`** holds the profile and the actions: publish an offer, publish a need, publish a case, send a message.
 - **`Publication`** is an abstract class with what every post shares (identifier, title, content, date, author). **Need** and **Help** specialise it; an offer of help adds contact details, a subtitle, an image and a like counter.
@@ -74,7 +76,13 @@ String _createChatRoomId(String a, String b) {
   <figcaption><b>Fig. 4</b>Navigation: the <em>Wrapper</em> splits anonymous and authenticated users; the home page leads to the lists of offers and needs, the cases and the chats.</figcaption>
 </figure>
 
-The work followed a simple sequence: study the problem, compare possible solutions, choose an Android app, learn Dart, Flutter and Firebase, define the functional requirements and the model, then code, test and fix.
+## How the work went
+
+1. **Problem.** Looking at how help was reaching people during the lockdown, and where it was not.
+2. **Solution.** Comparing a few alternatives and settling on an Android app.
+3. **Tools.** Learning Dart, Flutter and Firebase, which were new to me.
+4. **Design.** Writing the functional requirements, the class model and the navigation of the app.
+5. **Build.** Implementing, testing and fixing, then presenting it in a poster and publishing the code.
 
 ## Results and lessons
 

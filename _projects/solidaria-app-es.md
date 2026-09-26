@@ -1,6 +1,6 @@
 ---
 title: "Solidaria App: una red móvil de ayuda mutua"
-description: "Una app Android hecha con Flutter y Firebase para la asignatura de Programación Orientada a Objetos de la Universidad Nacional de Colombia, que conecta a personas con necesidades con quienes están dispuestos a ayudar."
+description: "Una app Android, hecha con Flutter y Firebase, que conecta a personas con necesidades con quienes están dispuestos a ayudar. Mi proyecto para la asignatura de Programación Orientada a Objetos de la Universidad Nacional de Colombia."
 lang: es
 date: 2020-07-05
 permalink: /es/proyectos/solidaria-app/
@@ -10,7 +10,9 @@ published: true
 repository: "https://github.com/jhernandezga/Proyecto-POO-Economia-Solidaria"
 ---
 
-El proyecto final de la asignatura de Programación Orientada a Objetos de la Universidad Nacional de Colombia (2020-1): una app Android, escrita en Dart con Flutter y respaldada por Firebase, que funciona como una pequeña red social para la economía solidaria. El póster del proyecto está en el [repositorio](https://github.com/jhernandezga/Proyecto-POO-Economia-Solidaria).
+En la asignatura de Programación Orientada a Objetos de la Universidad Nacional de Colombia (2020-1), cada estudiante debía plantear y desarrollar un proyecto que aplicara la programación orientada a objetos para ayudar con una problemática social. El problema, la idea y la forma de construirla quedaban a nuestra elección.
+
+Decidí trabajar sobre cómo llegaban las ayudas a las personas durante la primera cuarentena por la COVID-19, y construí Solidaria App: una app Android, escrita en Dart con Flutter y respaldada por Firebase, que funciona como una pequeña red social para la economía solidaria. El póster del proyecto está en el [repositorio](https://github.com/jhernandezga/Proyecto-POO-Economia-Solidaria).
 
 <figure>
   <img src="{{ '/assets/images/projects/solidaria/screens.jpg' | relative_url }}" alt="Cuatro capturas de pantalla: un listado de ayudas, un listado de publicaciones, un carrusel de casos y una conversación de chat." loading="lazy">
@@ -39,7 +41,7 @@ Una sola plataforma donde quienes ofrecen ayuda y quienes la necesitan puedan en
 
 ## Diseño orientado a objetos
 
-Como era el centro de la asignatura, la app partió de un modelo de clases:
+La app partió de un modelo de clases, diseñado antes que cualquier parte de la interfaz:
 
 - **`Usuario`** guarda el perfil y las acciones: publicar una ayuda, publicar una necesidad, publicar un caso, enviar un mensaje.
 - **`Publicación`** es una clase abstracta con lo que comparte cualquier publicación (identificador, título, contenido, fecha, autor). **Necesidad** y **Ayuda** la especializan; una ayuda añade datos de contacto, un subtítulo, una imagen y un contador de «me gusta».
@@ -74,7 +76,13 @@ String _createChatRoomId(String a, String b) {
   <figcaption><b>Fig. 4</b>Navegación: el <em>Wrapper</em> separa a los usuarios sin autenticación de los autenticados; la página principal lleva a las listas de ayudas y necesidades, a los casos y a los chats.</figcaption>
 </figure>
 
-El trabajo siguió una secuencia sencilla: estudiar el problema, comparar alternativas de solución, elegir una app para Android, aprender Dart, Flutter y Firebase, definir los requisitos funcionales y el modelo, y después programar, probar y corregir.
+## Cómo avanzó el trabajo
+
+1. **Problema.** Mirar cómo llegaban las ayudas a las personas durante la cuarentena, y dónde no llegaban.
+2. **Solución.** Comparar algunas alternativas y quedarme con una app para Android.
+3. **Herramientas.** Aprender Dart, Flutter y Firebase, que eran nuevos para mí.
+4. **Diseño.** Escribir los requisitos funcionales, el modelo de clases y la navegación de la app.
+5. **Construcción.** Implementar, probar y corregir; después presentarla en un póster y publicar el código.
 
 ## Resultados y aprendizajes
 

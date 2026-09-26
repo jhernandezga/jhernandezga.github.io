@@ -1,4 +1,4 @@
-# Jorge Hernández — personal website
+# Jorge Hernández Galeano — personal website
 
 A bilingual personal site for projects, publications, articles, and a knowledge garden. English lives at `/`; Spanish lives at `/es/`.
 

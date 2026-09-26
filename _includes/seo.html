@@ -55,7 +55,7 @@
 {% if page.section == 'home' %}<script type="application/ld+json">
 {"@context": "https://schema.org", "@graph": [
 {{ person_json }},
-{"@type": "WebSite", "@id": {{ '/' | absolute_url | append: '#website' | jsonify }}, "url": {{ '/' | absolute_url | jsonify }}, "name": {{ p.name | jsonify }}, "alternateName": ["Jorge Hernandez", {{ p.full_name | jsonify }}], "inLanguage": ["en", "es"], "publisher": {"@id": {{ person_id | jsonify }}}}
+{"@type": "WebSite", "@id": {{ '/' | absolute_url | append: '#website' | jsonify }}, "url": {{ '/' | absolute_url | jsonify }}, "name": {{ p.name | jsonify }}, "alternateName": ["Jorge Hernández", "Jorge Hernandez Galeano", {{ p.full_name | jsonify }}], "inLanguage": ["en", "es"], "publisher": {"@id": {{ person_id | jsonify }}}}
 ]}
 </script>
 {% elsif page.section == 'about' %}<script type="application/ld+json">

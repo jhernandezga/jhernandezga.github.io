@@ -1,0 +1,14 @@
+{% comment %} A small animated signal under a page heading; drawn by assets/js/site.js. {% endcomment %}
+{% assign es = false %}{% if page.lang == 'es' %}{% assign es = true %}{% endif %}
+{% case include.kind %}
+{% when 'chaos' %}{% if es %}{% assign trace_caption = 'xₙ₊₁ = r·xₙ(1 − xₙ)   · primero orden, después caos' %}{% else %}{% assign trace_caption = 'xₙ₊₁ = r·xₙ(1 − xₙ)   · order first, then chaos' %}{% endif %}
+{% when 'bayes' %}{% if es %}{% assign trace_caption = 'posterior ∝ verosimilitud × prior' %}{% else %}{% assign trace_caption = 'posterior ∝ likelihood × prior' %}{% endif %}
+{% when 'entropy' %}{% if es %}{% assign trace_caption = 'H(X) = −Σ p(x) log₂ p(x)   · de la certeza a la sorpresa' %}{% else %}{% assign trace_caption = 'H(X) = −Σ p(x) log₂ p(x)   · from certainty to surprise' %}{% endif %}
+{% when 'descent' %}{% assign trace_caption = 'xₖ₊₁ = xₖ − η f′(xₖ)' %}
+{% when 'inverse' %}{% assign trace_caption = 'y = Ax + ε  →  x̂' %}
+{% when 'decay' %}{% assign trace_caption = '‖x‖ → 0' %}
+{% endcase %}
+{% if trace_caption %}<figure class="trace" data-trace="{{ include.kind }}" aria-hidden="true">
+<svg viewBox="0 0 600 84"><path class="trace-axis" d="M0 42H600"/></svg>
+<figcaption>{{ trace_caption }}</figcaption>
+</figure>{% endif %}

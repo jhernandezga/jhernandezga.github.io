@@ -3,4 +3,4 @@ layout: default
 title: Page not found
 permalink: /404.html
 ---
-<section class="page-heading"><p class="eyebrow">404</p><h1>Page not found</h1><p class="page-description">This address may have changed.</p>{% include fragment.html key='not_found' %}<a class="button" href="{{ '/' | relative_url }}">Return home</a> <a class="inline-link" href="{{ '/es/' | relative_url }}">Ir al inicio en español</a></section>
+<section class="page-heading"><p class="eyebrow">404</p><h1>Page not found</h1><p class="page-description">This address may have changed.</p>{% include trace.html kind='decay' %}{% include fragment.html key='not_found' %}<a class="button" href="{{ '/' | relative_url }}">Return home</a> <a class="inline-link" href="{{ '/es/' | relative_url }}">Ir al inicio en español</a></section>

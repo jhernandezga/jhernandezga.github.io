@@ -4,6 +4,7 @@ layout: default
 {% assign t = site.data.labels[page.lang] %}
 {% assign entries = site[page.collection_key] | where: 'lang', page.lang | sort: 'date' | reverse %}
 <div class="heading-row"><section class="page-heading"><p class="eyebrow">{{ t.collection }}</p><h1>{{ page.title }}</h1><p class="page-description">{{ page.description }}</p>
+{% case page.section %}{% when 'projects' %}{% assign kind = 'chaos' %}{% when 'publications' %}{% assign kind = 'bayes' %}{% when 'writing' %}{% assign kind = 'entropy' %}{% when 'garden' %}{% assign kind = 'descent' %}{% endcase %}{% include trace.html kind=kind %}
 {% if page.section == 'garden' %}<div class="garden-key"><span class="stage-seed">{{ t.seed }}</span><span aria-hidden="true">⟶</span><span class="stage-growing">{{ t.growing }}</span><span aria-hidden="true">⟶</span><span class="stage-evergreen">{{ t.evergreen }}</span></div>{% endif %}</section>
 {% include fragment.html key=page.section class='marginal' %}</div>
 {% if entries.size > 0 %}
