@@ -1,0 +1,6 @@
+{% assign f = site.data.fragments[include.key] %}{% assign fl = page.lang | default: 'en' %}{% assign fx = f[fl] %}
+{% if f and fx %}<figure class="fragment{% if include.class %} {{ include.class }}{% endif %}">
+  <div class="fragment-formula"><span class="formula">{{ f.formula }}</span><span class="gloss">{{ f.gloss[fl] }}</span></div>
+  <blockquote><p>{{ fx.text }}</p></blockquote>
+  <figcaption>{% if f.after %}{% if fl == 'es' %}según{% else %}after{% endif %} {% else %}— {% endif %}{{ f.author }}, <cite>{{ fx.work }}</cite></figcaption>
+</figure>{% endif %}

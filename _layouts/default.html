@@ -43,7 +43,7 @@
     <a class="language-switch" href="{{ page.translation | default: t.other_home | relative_url }}" lang="{{ t.other_lang }}" hreflang="{{ t.other_lang }}">{% if page.translation %}{{ t.other }}{% else %}{{ t.other_fallback }}{% endif %}<span aria-hidden="true"> ↗</span></a>
   </header>
   <main id="main" tabindex="-1">{{ content }}</main>
-  <footer class="site-footer"><span>© {{ 'now' | date: '%Y' }} {{ site.data.profile.name }}</span><span>{{ t.footer }}</span></footer>
+  <footer class="site-footer"><span>© {{ 'now' | date: '%Y' }} {{ site.data.profile.name }}</span><span class="objective">x̂ = arg min<sub>x</sub> ‖y − Ax‖² + λ<span class="prior" tabindex="0" aria-describedby="prior-note">R(x)</span><span class="prior-note" id="prior-note" role="tooltip">{{ t.prior_note }}</span></span><span>{{ t.footer }}</span></footer>
 </div>
 </body>
 </html>

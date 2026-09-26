@@ -2,5 +2,6 @@
 layout: default
 ---
 {% assign t = site.data.labels[page.lang] %}{% assign bio = site.data.profile[page.lang] %}
-<section class="page-heading"><p class="eyebrow">{{ t.profile }}</p><h1>{{ page.title }}</h1><p class="page-description">{{ bio.role }}</p></section>
+<div class="heading-row"><section class="page-heading"><p class="eyebrow">{{ t.profile }}</p><h1>{{ page.title }}</h1><p class="page-description">{{ bio.role }}</p></section>
+{% include fragment.html key='about' class='marginal' %}</div>
 <div class="about-grid"><article class="prose"><p class="about-intro">{{ bio.introduction }}</p>{{ content }}</article><aside class="profile-panel"><span class="large-monogram">{{ site.data.profile.initials }}</span><h2>{{ site.data.profile.name }}</h2><p>{{ bio.role }}</p><div class="profile-links"><a href="{{ site.data.profile.github }}">GitHub ↗</a>{% if site.data.profile.medium != '' %}<a href="{{ site.data.profile.medium }}">Medium ↗</a>{% endif %}</div><div class="cv-block"><h3>CV</h3>{% if bio.cv != '' %}<a class="button" href="{{ bio.cv | relative_url }}">{{ t.download_cv }}</a>{% else %}<p>{{ t.cv_pending }}</p>{% endif %}</div></aside></div>

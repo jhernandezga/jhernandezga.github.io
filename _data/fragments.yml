@@ -1,0 +1,61 @@
+# Fragments: a quotation paired with an equation that answers it.
+# Keys match page sections (projects, publications, writing, garden, about)
+# plus a few interface states (empty, no_results, not_found).
+# "after" marks a paraphrase rather than a direct quotation.
+
+projects:
+  formula: "2 × 2 = 4"
+  gloss: {en: "the limit of calculation", es: "el límite del cálculo"}
+  author: Fyodor Dostoevsky
+  en: {text: "Twice two makes four is not life, gentlemen, but is the beginning of death.", work: "Notes from Underground"}
+  es: {text: "Dos por dos son cuatro no es vida, señores, sino el principio de la muerte.", work: "Memorias del subsuelo"}
+
+publications:
+  formula: "p(x | y) ∝ p(y | x) · p(x)"
+  gloss: {en: "every inference carries a prior", es: "toda inferencia arrastra un prior"}
+  author: Pierre Bourdieu
+  after: true
+  en: {text: "Knowledge is never produced from nowhere: the field in which we look shapes what we are able to see.", work: "on the scientific field"}
+  es: {text: "El conocimiento nunca se produce desde ninguna parte: el campo desde el que miramos da forma a lo que podemos ver.", work: "sobre el campo científico"}
+
+writing:
+  formula: "H(X) = −Σ p(x) log p(x)"
+  gloss: {en: "information is surprise", es: "la información es sorpresa"}
+  author: Franz Kafka
+  en: {text: "A book must be the axe for the frozen sea within us.", work: "Letter to Oskar Pollak, 1904"}
+  es: {text: "Un libro debe ser el hacha que rompa el mar helado que llevamos dentro.", work: "Carta a Oskar Pollak, 1904"}
+
+garden:
+  formula: "xₖ₊₁ = xₖ − η ∇f(xₖ)"
+  gloss: {en: "understanding by iteration", es: "comprender por iteración"}
+  author: Albert Camus
+  en: {text: "In the midst of winter, I found there was, within me, an invincible summer.", work: "Return to Tipasa"}
+  es: {text: "En medio del invierno, descubrí que había en mí un verano invencible.", work: "Retorno a Tipasa"}
+
+about:
+  formula: "y = Ax + ε"
+  gloss: {en: "we only ever see y", es: "solo vemos y"}
+  author: Fyodor Dostoevsky
+  en: {text: "Man is a mystery. It needs to be unravelled, and if you spend your whole life unravelling it, don't say that you've wasted time.", work: "Letter to his brother Mikhail, 1839"}
+  es: {text: "El hombre es un misterio. Hay que desentrañarlo, y si te pasas la vida desentrañándolo, no digas que has perdido el tiempo.", work: "Carta a su hermano Mijaíl, 1839"}
+
+empty:
+  formula: "xₖ₊₁ = xₖ"
+  gloss: {en: "a fixed point", es: "un punto fijo"}
+  author: Albert Camus
+  en: {text: "One must imagine Sisyphus happy.", work: "The Myth of Sisyphus"}
+  es: {text: "Hay que imaginarse a Sísifo feliz.", work: "El mito de Sísifo"}
+
+no_results:
+  formula: "⟨q, x⟩ = 0"
+  gloss: {en: "orthogonal to everything here", es: "ortogonal a todo lo que hay aquí"}
+  author: Albert Camus
+  en: {text: "The absurd is born of this confrontation between the human need and the unreasonable silence of the world.", work: "The Myth of Sisyphus"}
+  es: {text: "Lo absurdo nace de esta confrontación entre el llamamiento humano y el silencio irrazonable del mundo.", work: "El mito de Sísifo"}
+
+not_found:
+  formula: "x ∉ Ω"
+  gloss: {en: "outside the domain", es: "fuera del dominio"}
+  author: Franz Kafka
+  en: {text: "No one else could ever be admitted here, since this gate was made only for you. I am now going to shut it.", work: "Before the Law"}
+  es: {text: "Nadie más podía entrar por aquí, porque esta entrada estaba destinada solo a ti. Ahora voy a cerrarla.", work: "Ante la ley"}

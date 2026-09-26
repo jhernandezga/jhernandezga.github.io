@@ -103,6 +103,12 @@ Edit `_data/profile.yml` to change the name, the introduction and interests in e
 
 Upload your CV PDFs to `assets/files/`. Set `cv` under each language to `/assets/files/cv-en.pdf` or `/assets/files/cv-es.pdf`. Both can point to the same file if desired. The download button appears only when a path is configured; upload the file first.
 
+## Fragments (quotations and equations)
+
+Each collection page, the About page, the empty and no-results states, and the 404 page show a short fragment: a quotation paired with an equation that answers it. Edit them in `_data/fragments.yml`. Each entry has a `formula`, a short `gloss` in both languages, an `author`, and the `text` and `work` for each language. Add `after: true` when the text is a paraphrase rather than a direct quotation; it is then credited as "after …" / "según …". Delete an entry to hide that fragment.
+
+The footer tooltip on `R(x)` and the home-page epigraph are in `_data/labels.json` (`prior_note`, `epigraph`).
+
 ## Formatting
 
 Use `## Heading` and `### Subheading`; the page already has its main title. Two or more second-level headings generate an automatic table of contents. Other useful Markdown:
