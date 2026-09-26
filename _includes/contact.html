@@ -1,0 +1,28 @@
+{% comment %} Contact block for the About page: the email first, then an optional form relayed by FormSubmit. {% endcomment %}
+{% assign p = site.data.profile %}
+<section class="contact" id="contact" aria-labelledby="contact-title">
+  <h2 id="contact-title">{{ t.contact_title }}</h2>
+  <p>{{ t.contact_intro }}</p>
+  <div class="contact-email">
+    <a class="contact-address" href="mailto:{{ p.email }}">{{ p.email }}</a>
+    <button type="button" class="copy-button" data-copy="{{ p.email }}" data-done="{{ t.contact_copied }}">{{ t.contact_copy }}</button>
+  </div>
+  {% if p.contact_form and p.contact_form != '' %}
+  <form class="contact-form" action="{{ p.contact_form }}" method="POST" data-contact-form data-ajax="{{ p.contact_form | replace: 'formsubmit.co/', 'formsubmit.co/ajax/' }}" data-sending="{{ t.contact_sending }}" data-sent="{{ t.contact_sent }}" data-error="{{ t.contact_error }}" data-email="{{ p.email }}">
+    <p class="contact-form-title">{{ t.contact_form_title }}</p>
+    <div class="field-row">
+      <label class="field"><span>{{ t.contact_name }}</span><input type="text" name="name" autocomplete="name" required></label>
+      <label class="field"><span>{{ t.contact_email }}</span><input type="email" name="email" autocomplete="email" required></label>
+    </div>
+    <label class="field"><span>{{ t.contact_subject }}</span><input type="text" name="subject" required></label>
+    <label class="field"><span>{{ t.contact_message }}</span><textarea name="message" rows="6" required></textarea></label>
+    <input type="text" name="_honey" class="field-trap" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <input type="hidden" name="_subject" value="Message from {{ site.url | remove: 'https://' }}">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="{{ page.url | absolute_url }}?sent=1#contact">
+    <button type="submit" class="button">{{ t.contact_send }}{% include icon.html name='arrow' %}</button>
+    <p class="form-status" role="status" aria-live="polite" hidden></p>
+  </form>
+  <p class="form-note">{{ t.contact_note }}</p>
+  {% endif %}
+</section>

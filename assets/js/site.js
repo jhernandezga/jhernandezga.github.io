@@ -237,6 +237,70 @@ if (traces.length) {
   });
 }
 
+// Contact: copy the address, and send the form in place through the relay.
+document.querySelectorAll('[data-copy]').forEach(button => {
+  const label = button.textContent;
+  button.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(button.dataset.copy);
+      button.textContent = button.dataset.done;
+      setTimeout(() => { button.textContent = label; }, 1800);
+    } catch {
+      window.location.href = `mailto:${button.dataset.copy}`;
+    }
+  });
+});
+
+const contactForm = document.querySelector('[data-contact-form]');
+if (contactForm) {
+  const status = contactForm.querySelector('.form-status');
+  const submit = contactForm.querySelector('button[type="submit"]');
+  const show = (text, state, withEmail = false, reason = '') => {
+    status.hidden = false;
+    status.dataset.state = state;
+    status.textContent = text;
+    if (withEmail) {
+      const link = document.createElement('a');
+      link.href = `mailto:${contactForm.dataset.email}`;
+      link.textContent = contactForm.dataset.email;
+      status.append(' ', link, '.');
+    }
+    if (reason) {
+      const detail = document.createElement('small');
+      detail.className = 'form-reason';
+      detail.textContent = reason;
+      status.append(detail);
+    }
+  };
+  if (new URLSearchParams(window.location.search).has('sent')) show(contactForm.dataset.sent, 'ok');
+
+  contactForm.addEventListener('submit', async event => {
+    event.preventDefault();
+    const data = Object.fromEntries(new FormData(contactForm));
+    if (data._honey) return show(contactForm.dataset.sent, 'ok'); // a bot filled the hidden field
+    data._subject = `${data.subject} · ${data._subject}`;
+    delete data._next;
+    submit.disabled = true;
+    show(contactForm.dataset.sending, 'pending');
+    try {
+      const response = await fetch(contactForm.dataset.ajax, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(data)
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || String(result.success) !== 'true') throw new Error(result.message || `HTTP ${response.status}`);
+      contactForm.reset();
+      show(contactForm.dataset.sent, 'ok');
+    } catch (error) {
+      // Keep the relay's own explanation (e.g. the form still needs activation) visible for diagnosis.
+      show(contactForm.dataset.error, 'error', true, error.message === 'Failed to fetch' ? 'Network error: the relay could not be reached.' : error.message);
+    } finally {
+      submit.disabled = false;
+    }
+  });
+}
+
 const article = document.querySelector('[data-article]');
 const toc = document.querySelector('.toc');
 if (article && toc) {

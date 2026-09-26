@@ -65,7 +65,21 @@
     "no_page": "Page not found",
     "no_page_desc": "The address may have changed. Explore the collections or return home.",
     "return_home": "Return home",
-    "related": "Connected notes"
+    "related": "Connected notes",
+    "contact_title": "Contact",
+    "contact_intro": "The simplest way to reach me is by email, whether about work, readings, or anything else on this site.",
+    "contact_copy": "Copy",
+    "contact_copied": "Copied",
+    "contact_form_title": "Or write to me from here",
+    "contact_name": "Name",
+    "contact_email": "Your email",
+    "contact_subject": "Subject",
+    "contact_message": "Message",
+    "contact_send": "Send message",
+    "contact_sending": "Sending…",
+    "contact_sent": "Thank you, your message has been sent. I will reply to the email you gave.",
+    "contact_error": "The message could not be sent. Please write to me directly at",
+    "contact_note": "Messages from this form are delivered to my inbox through FormSubmit."
   },
   "es": {
     "home": "Inicio",
@@ -133,6 +147,20 @@
     "no_page": "Página no encontrada",
     "no_page_desc": "Es posible que la dirección haya cambiado. Explora las colecciones o vuelve al inicio.",
     "return_home": "Volver al inicio",
-    "related": "Notas conectadas"
+    "related": "Notas conectadas",
+    "contact_title": "Contacto",
+    "contact_intro": "La forma más sencilla de escribirme es por correo, ya sea sobre trabajo, lecturas o cualquier otra cosa de este sitio.",
+    "contact_copy": "Copiar",
+    "contact_copied": "Copiado",
+    "contact_form_title": "O escríbeme desde aquí",
+    "contact_name": "Nombre",
+    "contact_email": "Tu correo",
+    "contact_subject": "Asunto",
+    "contact_message": "Mensaje",
+    "contact_send": "Enviar mensaje",
+    "contact_sending": "Enviando…",
+    "contact_sent": "Gracias, tu mensaje fue enviado. Te responderé al correo que indicaste.",
+    "contact_error": "No se pudo enviar el mensaje. Escríbeme directamente a",
+    "contact_note": "Los mensajes de este formulario llegan a mi correo a través de FormSubmit."
   }
 }
