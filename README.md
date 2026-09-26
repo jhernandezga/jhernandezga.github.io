@@ -1,89 +1,58 @@
-# Your personal website
+# Jorge Hernández — personal website
 
-A GitHub Pages starter for projects, publications, essays, a knowledge garden, and a CV. It uses GitHub's built-in Jekyll support, so you can maintain content from the GitHub website. No local installation is required to publish it.
+A bilingual personal site for projects, publications, articles, and a knowledge garden. English lives at `/`; Spanish lives at `/es/`.
 
-This bilingual starter is personalized from your public GitHub profile (https://github.com/jhernandezga). It is not yet published. Your CV, Medium URL, project write-ups, and publications still need to be added. No invented projects or publications are included.
+**Website:** https://jhernandezga.github.io
 
-## First-time setup
+**Start here:** [Content guide / Guía de contenido](CONTENT_GUIDE.md)
 
-1. Sign in to GitHub and create a new **public** repository named `jhernandezga.github.io`, using your exact username. A repository is the folder GitHub uses to store your website. Turn on **Add README** so the main branch exists. If this exact repository already exists, review it before uploading anything.
-2. Extract the starter ZIP on your computer. Open the extracted folder: you should see `_config.yml`, `index.html`, and the other files.
-3. In the repository, use **Add file → Upload files**. Drag all the extracted files and folders into the upload area, then commit the changes. Upload the contents, not the ZIP and not an enclosing folder. Confirm that `_layouts` and `_data` also uploaded.
-4. Edit `_config.yml`: your name and website address are already filled in; leave `baseurl` empty. Keep quotation marks around text values.
-5. Review the English introduction in `index.html` and `about.md`, and the Spanish versions in `es/index.html` and `es/sobre-mi.md`. The navigation is in `_data/navigation.yml`.
-6. Open **Settings → Pages**. Under **Source**, choose **Deploy from a branch**. Select **main** and **/(root)**, then **Save**.
-7. Wait for the Pages deployment to finish; first publication can take up to 10 minutes. Open `https://jhernandezga.github.io`. The repository's Actions tab shows deployment progress or errors.
+## Everyday editing
 
-Your site and files in this public repository will be public. Use the version of your CV you want to share publicly.
+| What you want to change | Where to edit |
+| --- | --- |
+| Name, introduction, interests, profile links, CV links | `_data/profile.yml` |
+| About page in English or Spanish | `about.md` or `es/sobre-mi.md` |
+| A project | One Markdown file in `_projects/` |
+| A paper or publication | One Markdown file in `_publications/` |
+| An essay or Medium article | One Markdown file in `_writing/` |
+| A garden note | One Markdown file in `_notes/` |
+| Navigation labels and grouping | `_data/navigation.json` |
+| Interface translations | `_data/labels.json` |
 
-## How the site is organized
+Adding an entry automatically updates its collection and the homepage's latest additions. Titles, summaries, dates, topics, and note stages come from the entry's metadata. No page layout needs to be copied or edited.
 
-| Section | Index page | Content folder |
-|---|---|---|
-| Home | index.html | Edit the introduction here |
-| Projects | projects.html | _projects |
-| Publications | publications.html | _publications |
-| Writing / Medium | writing.html | _writing |
-| Knowledge garden | garden.html | _notes |
-| About & CV | about.md | assets for your CV PDF |
+## Navigation
 
-## Add a project, publication, article, or note
+- **Explore:** Home and Projects.
+- **Library:** Publications, Writing, and Knowledge garden.
+- **Profile:** About & CV.
 
-1. Open the matching file in `templates/` and copy its contents.
-2. Use **Add file → Create new file** in GitHub.
-3. Name it `_projects/my-project.md`, `_publications/my-paper.md`, `_writing/my-article.md`, or `_notes/my-idea.md`.
-4. Paste the template; replace the title, summary, date, and body. Keep the opening and closing `---` lines. Dates use YYYY-MM-DD. Use the publication date for papers and articles.
-5. Commit the change. The appropriate section automatically lists the new entry, newest first.
+The sidebar stays visible on desktop; the Menu button opens it on smaller screens. Entries have a link back to their collection. Longer entries have an automatic table of contents. Populated collections have text search and topic filters. Without JavaScript, navigation and every published entry remain accessible.
 
-The templates folder is excluded from the website. Keep unpublished private drafts outside the public repository.
+## Publishing
 
-For garden notes, use `status: seed`, `status: growing`, or `status: evergreen`. Update `updated` when revising a note; keep `date` as the original creation date. Link related notes using `[Related idea]({{ '/notes/my-idea.html' | relative_url }})` (use the actual published path).
+Keep GitHub Pages configured to **Deploy from a branch → main → /(root)**. GitHub builds the Jekyll site whenever a commit is pushed to `main`. All source folders, including `_layouts`, `_includes`, `_data`, `assets`, and `es`, must be committed.
 
-## Add your CV
+The website uses Jekyll's built-in collections and Liquid layouts with no custom plugins or external font requests. Existing section addresses are preserved.
 
-Upload your PDF as `assets/cv.pdf`. In `about.md`, replace the CV placeholder with:
+## Local development (optional)
 
-```markdown
-[Download my CV (PDF)]({{ '/assets/cv.pdf' | relative_url }})
+With Ruby and Bundler available:
+
+```sh
+bundle install
+bundle exec jekyll serve
 ```
 
-## Add Medium articles
+Then open http://localhost:4000. Use `bundle exec jekyll build` for a production build. The Gemfile matches the Jekyll 3.10 version supported by GitHub Pages' branch publishing. Build output, development dependencies, content templates, scripts, and this guide are excluded from the public site.
 
-Create one entry per article in `_writing`. Give it a short description and a direct link to the Medium article. Full copies are optional. Nothing imports automatically.
+## Design and content files
 
-## Markdown basics
+- `_layouts/`: shared home, collection, entry, and profile layouts.
+- `_includes/`: shared icons and content cards.
+- `assets/css/site.css`: responsive appearance.
+- `assets/js/site.js`: mobile menu, collection search, topic filter, and table of contents.
+- `templates/`: English and Spanish starter content, unpublished by default.
+- `scripts/New-Entry.ps1`: optional shortcut for creating a new entry.
 
-Use `## Heading` for a section, `**bold**` for emphasis, `- item` for a list, and `[link label](https://example.com)` for a link. Leave blank lines between paragraphs. Most ongoing work only needs Markdown; the shared appearance lives in `assets/style.css` and `_layouts/default.html`.
-
-## Official setup references
-
-- https://docs.github.com/en/pages/quickstart
-- https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll
-
-## Validation status
-
-The starter's file structure and local references were checked. A full Jekyll build and live deployment still need to be verified on GitHub; Ruby/Jekyll are not installed in the preparation environment.
-
-## English and Spanish
-
-English is at `/`; Spanish is at `/es/`. Every main page includes a language switch. Interface text and the introduction are translated; new articles are translated manually so you control the meaning.
-
-Each content entry must include `lang: en` or `lang: es` in its opening metadata. The indexes show only entries in their language. To publish an item in both languages, create two files, for example `_notes/my-idea-en.md` and `_notes/mi-idea-es.md`. For stable addresses and a direct language switch, add explicit metadata:
-
-English file:
-```yaml
-lang: en
-permalink: /notes/my-idea/
-translation: /es/notas/mi-idea/
-```
-
-Spanish file:
-```yaml
-lang: es
-permalink: /es/notas/mi-idea/
-translation: /notes/my-idea/
-```
-
-Without `translation`, the language switch goes to the other language's homepage. Translate note statuses too: `semilla`, `en crecimiento`, or `consolidada` in Spanish. The status text is free-form.
-
-When adding a CV, update both About pages. You can use one PDF or separate English and Spanish versions. Change the overall description in `_config.yml`, or add `description:` to an individual page for a language-specific description.
+The public introduction follows the existing profile copy. No projects, publications, qualifications, or results have been invented.

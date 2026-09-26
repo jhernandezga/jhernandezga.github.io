@@ -1,26 +1,40 @@
 title: "Jorge Hernández"
-description: "Projects, publications, writing, and a growing collection of ideas."
-lang: en
+description: "Signal processing, computational imaging, and ideas in progress."
 url: "https://jhernandezga.github.io"
 baseurl: ""
+lang: en
 markdown: kramdown
 permalink: pretty
 collections:
   projects:
     output: true
+    permalink: /projects/:name/
   publications:
     output: true
+    permalink: /publications/:name/
   writing:
     output: true
+    permalink: /writing/:name/
   notes:
     output: true
+    permalink: /notes/:name/
 defaults:
-  - scope:
-      path: ""
-    values:
-      layout: default
+  - scope: {path: ""}
+    values: {layout: default, lang: en}
+  - scope: {path: "", type: projects}
+    values: {layout: entry, section: projects}
+  - scope: {path: "", type: publications}
+    values: {layout: entry, section: publications}
+  - scope: {path: "", type: writing}
+    values: {layout: entry, section: writing}
+  - scope: {path: "", type: notes}
+    values: {layout: entry, section: garden}
 exclude:
   - README.md
+  - CONTENT_GUIDE.md
   - templates
+  - scripts
   - Gemfile
   - Gemfile.lock
+  - vendor
+  - .bundle

@@ -1,0 +1,8 @@
+{% assign doc = include.entry %}
+<article class="entry-card" data-entry data-search="{{ doc.title | append: ' ' | append: doc.description | append: ' ' | append: doc.tags | escape }}" data-tags="{{ doc.tags | jsonify | escape }}">
+  <div class="entry-meta"><span class="type-label">{{ t[doc.section] }}</span>{% if doc.date %}<time datetime="{{ doc.date | date: '%Y-%m-%d' }}">{{ doc.date | date: '%Y-%m-%d' }}</time>{% endif %}</div>
+  <h2><a href="{{ doc.url | relative_url }}">{{ doc.title | escape }}</a></h2>
+  <p>{{ doc.description | escape }}</p>
+  {% if doc.status %}<span class="stage">{{ t[doc.status] | default: doc.status }}</span>{% endif %}
+  {% if doc.tags.size > 0 %}<ul class="tags" aria-label="{{ t.topics }}">{% for tag in doc.tags %}<li>{{ tag | escape }}</li>{% endfor %}</ul>{% endif %}
+</article>

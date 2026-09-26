@@ -1,0 +1,14 @@
+name: Jorge Hernández
+initials: JH
+github: https://github.com/jhernandezga
+medium: ""
+en:
+  role: Signal processing & computational imaging
+  introduction: "I’m Jorge Hernández. My work explores signal processing, applied physics, and computational imaging, with an interest in inverse problems and machine learning."
+  interests: [Inverse problems, Computational imaging, Machine learning]
+  cv: ""
+es:
+  role: Procesamiento de señales e imagen computacional
+  introduction: "Soy Jorge Hernández. Mi trabajo explora el procesamiento de señales, la física aplicada y la imagen computacional, con interés en los problemas inversos y el aprendizaje automático."
+  interests: [Problemas inversos, Imagen computacional, Aprendizaje automático]
+  cv: ""

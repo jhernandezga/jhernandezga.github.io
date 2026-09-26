@@ -1,0 +1,16 @@
+---
+layout: default
+---
+{% assign t = site.data.labels[page.lang] %}
+{% assign entries = site[page.collection_key] | where: 'lang', page.lang | sort: 'date' | reverse %}
+<section class="page-heading"><p class="eyebrow">{{ t.collection }}</p><h1>{{ page.title }}</h1><p class="page-description">{{ page.description }}</p>
+{% if page.section == 'garden' %}<div class="garden-key"><span>{{ t.seed }}</span><span aria-hidden="true">→</span><span>{{ t.growing }}</span><span aria-hidden="true">→</span><span>{{ t.evergreen }}</span></div>{% endif %}</section>
+{% if entries.size > 0 %}
+<section class="collection-browser" data-collection aria-label="{{ page.title }}">
+  <div class="collection-controls" hidden><div class="search-field">{% include icon.html name='search' %}<label class="sr-only" for="collection-search">{{ t.search }}</label><input id="collection-search" type="search" placeholder="{{ t.search_hint }}" autocomplete="off"></div><label class="sr-only" for="topic-filter">{{ t.topics }}</label><select id="topic-filter"><option value="">{{ t.all }}</option></select></div>
+  <p class="results-count" aria-live="polite" data-count data-one="{{ t.entry }}" data-many="{{ t.entries }}">{{ entries.size }} {{ t.entries }}</p>
+  <div class="entry-grid">{% for entry in entries %}{% include card.html entry=entry %}{% endfor %}</div>
+  <div class="no-results" hidden><p>{{ t.no_matches }}</p><button type="button" class="button secondary" data-reset>{{ t.reset }}</button></div>
+</section>
+{% else %}<div class="empty-state"><span class="icon-tile">{% include icon.html name=page.section %}</span><h2>{{ t.empty_title }}</h2><p>{{ t.empty_text }}</p><a class="inline-link" href="{{ t.home_url | relative_url }}">{{ t.return_home }} {% include icon.html name='arrow' %}</a></div>{% endif %}
+{{ content }}

@@ -1,17 +1,18 @@
 ---
-title: About & CV
-permalink: /about/
+layout: about
+title: "About & CV"
+section: about
 lang: en
+permalink: /about/
 translation: /es/sobre-mi/
 ---
-I'm Jorge Hernández. My work explores signal processing, applied physics, and computational imaging. I'm interested in inverse problems and machine learning.
+## A place for work and ideas
 
 This site brings together my projects, publications, and writing, alongside a knowledge garden for ideas that are still developing.
 
-## CV
+## What you'll find here
 
-My CV will be available here soon.
-
-## Elsewhere
-
-[GitHub](https://github.com/jhernandezga)
+- **Projects:** implementations, experiments, and the work behind them.
+- **Publications:** research contributions and published results.
+- **Writing:** longer essays and articles, including work on Medium.
+- **Knowledge garden:** evolving notes, reading reflections, and open questions.

@@ -1,0 +1,108 @@
+{
+  "en": [
+    {
+      "label": "Explore",
+      "items": [
+        {
+          "key": "home",
+          "title": "Home",
+          "url": "/",
+          "icon": "home"
+        },
+        {
+          "key": "projects",
+          "title": "Projects",
+          "url": "/projects/",
+          "icon": "projects"
+        }
+      ]
+    },
+    {
+      "label": "Library",
+      "items": [
+        {
+          "key": "publications",
+          "title": "Publications",
+          "url": "/publications/",
+          "icon": "publications"
+        },
+        {
+          "key": "writing",
+          "title": "Writing",
+          "url": "/writing/",
+          "icon": "writing"
+        },
+        {
+          "key": "garden",
+          "title": "Knowledge garden",
+          "url": "/garden/",
+          "icon": "garden"
+        }
+      ]
+    },
+    {
+      "label": "Profile",
+      "items": [
+        {
+          "key": "about",
+          "title": "About & CV",
+          "url": "/about/",
+          "icon": "about"
+        }
+      ]
+    }
+  ],
+  "es": [
+    {
+      "label": "Explorar",
+      "items": [
+        {
+          "key": "home",
+          "title": "Inicio",
+          "url": "/es/",
+          "icon": "home"
+        },
+        {
+          "key": "projects",
+          "title": "Proyectos",
+          "url": "/es/proyectos/",
+          "icon": "projects"
+        }
+      ]
+    },
+    {
+      "label": "Biblioteca",
+      "items": [
+        {
+          "key": "publications",
+          "title": "Publicaciones",
+          "url": "/es/publicaciones/",
+          "icon": "publications"
+        },
+        {
+          "key": "writing",
+          "title": "Artículos",
+          "url": "/es/articulos/",
+          "icon": "writing"
+        },
+        {
+          "key": "garden",
+          "title": "Jardín de conocimiento",
+          "url": "/es/jardin/",
+          "icon": "garden"
+        }
+      ]
+    },
+    {
+      "label": "Perfil",
+      "items": [
+        {
+          "key": "about",
+          "title": "Sobre mí y CV",
+          "url": "/es/sobre-mi/",
+          "icon": "about"
+        }
+      ]
+    }
+  ]
+}

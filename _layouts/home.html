@@ -1,0 +1,19 @@
+---
+layout: default
+---
+{% assign t = site.data.labels[page.lang] %}
+{% assign bio = site.data.profile[page.lang] %}
+<section class="hero">
+  <div class="hero-copy"><p class="eyebrow">{{ t.eyebrow }}</p><h1>{{ t.headline }}</h1><p class="hero-intro">{{ bio.introduction }}</p><a class="button" href="{{ t.about_url | relative_url }}">{{ t.intro_link }}{% include icon.html name='arrow' %}</a></div>
+  <aside class="interests"><span class="interest-marker" aria-hidden="true">[ JH / 01 ]</span><h2>{{ t.interests }}</h2><ol>{% for interest in bio.interests %}<li><span class="interest-number">0{{ forloop.index }}</span>{{ interest }}</li>{% endfor %}</ol></aside>
+</section>
+<section class="collection-section" aria-labelledby="explore-title"><div class="section-heading"><div><h2 id="explore-title">{{ t.browse }}</h2><p>{{ t.browse_desc }}</p></div></div>
+<div class="collection-grid">
+{% assign keys = 'projects,publications,writing,garden' | split: ',' %}
+{% for key in keys %}
+{% case key %}{% when 'projects' %}{% assign route = t.project_url %}{% assign desc = t.project_desc %}{% when 'publications' %}{% assign route = t.publication_url %}{% assign desc = t.publication_desc %}{% when 'writing' %}{% assign route = t.writing_url %}{% assign desc = t.writing_desc %}{% when 'garden' %}{% assign route = t.garden_url %}{% assign desc = t.garden_desc %}{% endcase %}
+<a class="collection-card {{ key }}" href="{{ route | relative_url }}"><div class="card-top"><span class="icon-tile">{% include icon.html name=key %}</span><span class="card-number">0{{ forloop.index }}</span></div><h3>{{ t[key] }}</h3><p>{{ desc }}</p><span class="card-arrow">{% include icon.html name='arrow' %}</span></a>
+{% endfor %}
+</div></section>
+{% assign recent = site.documents | where: 'lang', page.lang | sort: 'date' | reverse %}
+{% if recent.size > 0 %}<section class="recent-section"><div class="section-heading"><div><h2>{{ t.latest }}</h2><p>{{ t.latest_desc }}</p></div></div><div class="entry-grid">{% for entry in recent limit:3 %}{% include card.html entry=entry %}{% endfor %}</div></section>{% endif %}
