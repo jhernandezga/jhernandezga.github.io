@@ -1,0 +1,21 @@
+---
+title: Knowledge garden
+permalink: /garden/
+lang: en
+translation: /es/jardin/
+---
+<p class="lead">A collection of evolving ideas. Seeds are early questions; growing notes are developing; evergreen notes are more established.</p>
+{% assign entries = site.notes | where: 'lang', page.lang | sort: 'date' | reverse %}
+{% if entries.size > 0 %}
+<div class="entries">
+{% for entry in entries %}
+<article>
+  <h2><a href="{{ entry.url | relative_url }}">{{ entry.title | escape }}</a></h2>
+  <p class="meta">{% if entry.date %}{{ entry.date | date: '%Y' }}{% endif %}{% if entry.status %} · {{ entry.status | escape }}{% endif %}</p>
+  <p>{{ entry.description | escape }}</p>
+</article>
+{% endfor %}
+</div>
+{% else %}
+<p class="empty">Nothing published here yet.</p>
+{% endif %}
