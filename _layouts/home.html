@@ -4,7 +4,7 @@ layout: default
 {% assign t = site.data.labels[page.lang] %}
 {% assign bio = site.data.profile[page.lang] %}
 <section class="hero">
-  <div class="hero-copy"><p class="eyebrow">{{ t.eyebrow }}</p><h1>{{ t.headline }}</h1><p class="hero-intro">{{ bio.introduction }}</p>{% if t.epigraph %}<p class="epigraph">{{ t.epigraph }}</p>{% endif %}<a class="button" href="{{ t.about_url | relative_url }}">{{ t.intro_link }}{% include icon.html name='arrow' %}</a></div>
+  <div class="hero-copy"><div class="hero-mark">{% if bio.photo_alt and site.data.profile.photo_square %}<a class="hero-portrait" href="{{ t.about_url | relative_url }}"><img src="{{ site.data.profile.photo_square | relative_url }}" alt="{{ bio.photo_alt }}" width="120" height="120"></a>{% endif %}<p class="eyebrow">{{ t.eyebrow }}</p></div><h1>{{ t.headline }}</h1><p class="hero-intro">{{ bio.introduction }}</p>{% if t.epigraph %}<p class="epigraph">{{ t.epigraph }}</p>{% endif %}<a class="button" href="{{ t.about_url | relative_url }}">{{ t.intro_link }}{% include icon.html name='arrow' %}</a></div>
   <aside class="interests">{% include signal.html %}<h2>{{ t.interests }}</h2><ol>{% for interest in bio.interests %}<li><span class="interest-number">0{{ forloop.index }}</span>{{ interest }}</li>{% endfor %}</ol></aside>
 </section>
 <section class="collection-section" aria-labelledby="explore-title"><div class="section-heading"><div><h2 id="explore-title">{{ t.browse }}</h2><p>{{ t.browse_desc }}</p></div></div>

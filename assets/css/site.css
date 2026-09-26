@@ -14,7 +14,7 @@
 
 /* Rail */
 .sidebar{width:var(--rail);position:fixed;inset:0 auto 0 0;padding:34px 22px 24px;background:var(--sidebar);color:#fff;display:flex;flex-direction:column;overflow-y:auto;z-index:5;background-image:linear-gradient(90deg,transparent calc(100% - 1px),#ffffff0f 0)}
-.brand{display:flex;gap:13px;align-items:center;text-decoration:none;color:white}.monogram{display:grid;place-items:center;width:42px;height:42px;border:1px solid #5a72ff;border-radius:var(--radius);font-family:var(--serif);font-style:italic;font-size:1.15rem;letter-spacing:.02em;flex:none;position:relative}.monogram::after{content:"";position:absolute;right:-3px;bottom:-3px;width:5px;height:5px;background:#5a72ff}.brand-name{font-family:var(--serif);font-size:1.2rem;font-weight:400;line-height:1.3}
+.brand{display:flex;gap:13px;align-items:center;text-decoration:none;color:white}.monogram{display:grid;place-items:center;width:42px;height:42px;border:1px solid #5a72ff;border-radius:var(--radius);font-family:var(--serif);font-style:italic;font-size:1.15rem;letter-spacing:.02em;flex:none;position:relative}.monogram::after{content:"";position:absolute;right:-3px;bottom:-3px;width:5px;height:5px;background:#5a72ff}.monogram-photo{padding:2px}.monogram-photo img{display:block;width:100%;height:100%;object-fit:cover;border-radius:1px}.brand-name{font-family:var(--serif);font-size:1.2rem;font-weight:400;line-height:1.3}
 .sidebar-role{color:var(--sidebar-text);font-size:.875rem;line-height:1.6;margin:20px 4px 30px}
 .nav-group{margin-bottom:24px}.nav-heading{display:flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.14em;color:#8193b3;font-family:var(--mono);font-size:.6875rem;margin:0 12px 8px;font-weight:500}.nav-heading::after{content:"";flex:1;height:1px;background:#2b3a58}
 .nav-link{display:flex;gap:12px;align-items:center;padding:9px 12px;margin:2px 0;color:#c9d4e8;text-decoration:none;font-size:.9375rem;line-height:1.5;border-left:1px solid transparent;transition:color .15s,border-color .15s,background .2s}.nav-link .icon{opacity:.7}.nav-link:hover{color:white;border-left-color:#51607e;background:#ffffff08}.nav-link.active{color:white;background:linear-gradient(90deg,#415cfa47,#415cfa00);border-left:2px solid #8fa1ff;padding-left:11px}.nav-link.active .icon{opacity:1;color:#aebcff}
@@ -37,6 +37,14 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.15;letter-spacin
 .hero h1{font-weight:300;letter-spacing:-.035em;line-height:1.08}
 .hero-intro{font-size:1.0625rem;color:var(--muted);max-width:61ch;margin:0 0 24px;line-height:1.8}
 .epigraph{font-family:var(--serif);font-style:italic;font-size:1.2rem;line-height:1.55;color:var(--ink);max-width:48ch;margin:0 0 32px;padding-left:20px;border-left:1px solid var(--blue)}
+
+/* Portrait: framed with the same viewfinder brackets */
+.hero-mark{display:flex;align-items:center;gap:18px;margin:0 0 22px}.hero-mark .eyebrow{margin:0}
+.hero-portrait,.portrait{position:relative;display:block}.hero-portrait{flex:none;width:80px;height:80px}.hero-portrait img,.portrait img{display:block;width:100%;height:100%;object-fit:cover;border-radius:var(--radius)}
+.hero-portrait::before,.hero-portrait::after,.portrait::before,.portrait::after{content:"";position:absolute;width:8px;height:8px;border:0 solid var(--blue);pointer-events:none;transition:transform .25s var(--ease)}
+.hero-portrait::before,.portrait::before{top:-5px;left:-5px;border-top-width:1px;border-left-width:1px}.hero-portrait::after,.portrait::after{bottom:-5px;right:-5px;border-bottom-width:1px;border-right-width:1px}
+.hero-portrait:hover::before{transform:translate(2px,2px)}.hero-portrait:hover::after{transform:translate(-2px,-2px)}
+.portrait{margin:0 0 24px}.portrait img{height:auto;aspect-ratio:3/4}
 
 /* Buttons: quiet, precise, mono-set commands */
 .button{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:14px;padding:11px 18px 11px 20px;min-height:44px;color:white;background:var(--blue);border:1px solid var(--blue);border-radius:var(--radius);text-decoration:none;font-family:var(--mono);font-size:.8125rem;font-weight:500;letter-spacing:.04em;line-height:1.5;transition:background .2s,border-color .2s,color .2s}.button .icon{transition:transform .25s var(--ease)}.button:hover{background:var(--ink);border-color:var(--ink);text-decoration:none}.button:hover .icon{transform:translateX(4px)}

@@ -17,6 +17,9 @@ alternate_names:
   - Jorge A. Hernandez Galeano
   - jhernandezga
 initials: JH
+photo: /assets/images/profile/portrait.jpg
+photo_square: /assets/images/profile/portrait-sq.jpg
+photo_large: /assets/images/profile/portrait-lg.jpg
 github: https://github.com/jhernandezga
 medium: ""
 affiliations: [Université Paris-Saclay, GE HealthCare]
@@ -25,18 +28,20 @@ alumni_of:
   - Universidad Nacional de Colombia
 knows_about: [Medical imaging, Inverse problems, Computational imaging, Spectral X-ray imaging, Signal processing, Deep learning]
 en:
+  photo_alt: "Jorge Hernández smiling on a bridge over a canal on a winter afternoon"
   job_title: PhD candidate in medical imaging
   seo_title: "Jorge Hernández · Medical imaging, readings and curiosities"
   seo_description: "Jorge Hernández (Jorge Andrés Hernández Galeano), PhD candidate in medical imaging at Université Paris-Saclay and GE HealthCare. Projects, writing, reading notes and curiosities."
   role: Imaging, inverse problems, and other curiosities
   introduction: "I’m Jorge. I work on medical imaging, trying to recover what an X-ray image hides, and I spend much of the rest of my time reading and following whatever question happens to catch me. This site holds both."
-  interests: [Inverse problems in medical imaging, "Dostoevsky, Kafka and Camus", Bourdieu and how knowledge is made]
+  interests: [Inverse problems in medical imaging, Spectral X-ray imaging, Model-based deep learning]
   cv: /assets/files/cv-en.pdf
 es:
+  photo_alt: "Jorge Hernández sonriendo sobre un puente frente a un canal, en una tarde de invierno"
   job_title: Doctorando en imágenes médicas
   seo_title: "Jorge Hernández · Imagen médica, lecturas y curiosidades"
   seo_description: "Jorge Hernández (Jorge Andrés Hernández Galeano), doctorando en imágenes médicas en la Université Paris-Saclay y GE HealthCare. Proyectos, escritos, notas de lectura y curiosidades."
   role: Imagen, problemas inversos y otras curiosidades
   introduction: "Soy Jorge. Trabajo en imagen médica, intentando recuperar lo que esconde una imagen de rayos X, y paso buena parte del resto de mi tiempo leyendo y siguiendo cualquier pregunta que logre atraparme. Este sitio guarda ambas cosas."
-  interests: [Problemas inversos en imagen médica, "Dostoievski, Kafka y Camus", Bourdieu y cómo se produce el conocimiento]
+  interests: [Problemas inversos en imagen médica, Rayos X espectrales, Deep learning basado en modelos]
   cv: /assets/files/cv-es.pdf

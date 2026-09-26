@@ -4,3 +4,5 @@ _site/
 .sass-cache/
 .bundle/
 vendor/
+# Full-size original of the profile photo; the site uses the crops in assets/images/profile/
+1000146840.jpg

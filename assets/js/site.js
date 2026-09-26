@@ -62,7 +62,14 @@ if (collection) {
     search.focus();
   });
   collection.querySelector('.collection-controls').hidden = false;
-  update();
+  // Browsers may restore a previous search when returning to the page; always start unfiltered.
+  const reset = () => {
+    search.value = '';
+    select.value = '';
+    update();
+  };
+  window.addEventListener('pageshow', reset);
+  reset();
 }
 
 const article = document.querySelector('[data-article]');

@@ -32,6 +32,7 @@ defaults:
   - scope: {path: "", type: notes}
     values: {layout: entry, section: garden}
 exclude:
+  - 1000146840.jpg
   - README.md
   - CONTENT_GUIDE.md
   - templates

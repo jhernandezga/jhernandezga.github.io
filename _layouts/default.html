@@ -18,7 +18,7 @@
 {% assign bio = site.data.profile[lang] %}
 <a class="skip-link" href="#main">{{ t.skip }}</a>
 <aside class="sidebar">
-  <a class="brand" href="{{ t.home_url | relative_url }}"><span class="monogram">{{ site.data.profile.initials }}</span><span class="brand-name">{{ site.data.profile.name }}</span></a>
+  <a class="brand" href="{{ t.home_url | relative_url }}">{% if site.data.profile.photo_square %}<span class="monogram monogram-photo"><img src="{{ site.data.profile.photo_square | relative_url }}" alt="" width="42" height="42"></span>{% else %}<span class="monogram">{{ site.data.profile.initials }}</span>{% endif %}<span class="brand-name">{{ site.data.profile.name }}</span></a>
   <p class="sidebar-role">{{ bio.role }}</p>
   <button class="menu-button" type="button" aria-controls="site-navigation" aria-expanded="false">{% include icon.html name='menu' %}<span>{{ t.menu }}</span></button>
   <nav id="site-navigation" aria-label="{{ t.nav }}">
