@@ -1,8 +1,10 @@
 title: "Jorge Hernández"
-description: "Signal processing, computational imaging, and ideas in progress."
+description: "Work, readings and curiosities: a personal site by Jorge Hernández."
 url: "https://jhernandezga.github.io"
 baseurl: ""
 lang: en
+# Paste the code from Google Search Console (HTML tag method) to verify ownership.
+# google_site_verification: ""
 markdown: kramdown
 permalink: pretty
 collections:

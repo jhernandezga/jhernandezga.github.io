@@ -3,10 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title | escape }} · {{ site.title | escape }}</title>
-  <meta name="description" content="{{ page.description | default: site.description | escape }}">
-  <link rel="canonical" href="{{ page.url | absolute_url }}">
-  {% if page.translation %}<link rel="alternate" hreflang="{% if page.lang == 'es' %}en{% else %}es{% endif %}" href="{{ page.translation | absolute_url }}">{% endif %}
+  {% assign lang = page.lang | default: 'en' %}
+  {% include seo.html %}
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/favicon.svg' | relative_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

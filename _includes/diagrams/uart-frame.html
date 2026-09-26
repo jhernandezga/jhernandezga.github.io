@@ -1,0 +1,32 @@
+{% if include.lang == 'es' %}{% assign u_title = 'Trama UART 8N1 del byte 0x4A: bit de inicio en bajo, ocho bits de datos empezando por el menos significativo, bit de parada en alto; el receptor muestrea en el centro de cada bit.' %}{% assign u_start = 'inicio' %}{% assign u_stop = 'parada' %}{% assign u_half = '16 ticks → centro del bit de inicio' %}{% assign u_bit = '32 ticks = 1 bit → muestra' %}{% assign u_foot = "0x4A = 'J' · primero el LSB · 8N1 · 9600 baudios" %}{% else %}{% assign u_title = 'UART 8N1 frame for the byte 0x4A: start bit low, eight data bits least significant first, stop bit high; the receiver samples in the middle of each bit.' %}{% assign u_start = 'start' %}{% assign u_stop = 'stop' %}{% assign u_half = '16 ticks → middle of the start bit' %}{% assign u_bit = '32 ticks = 1 bit → sample' %}{% assign u_foot = "0x4A = 'J' · LSB first · 8N1 · 9600 baud" %}{% endif %}
+<figure class="diagram">
+<div class="diagram-scroll">
+<svg viewBox="0 0 760 230" role="img" aria-label="{{ u_title }}">
+  <g class="dg-grid">
+    <path d="M80 40V120M136 40V120M192 40V120M248 40V120M304 40V120M360 40V120M416 40V120M472 40V120M528 40V120M584 40V120M640 40V120"/>
+  </g>
+  <g class="dg-sample">
+    <path d="M108 52V118M164 52V118M220 52V118M276 52V118M332 52V118M388 52V118M444 52V118M500 52V118M556 52V118M612 52V118"/>
+  </g>
+  <path class="dg-wave" d="M40 60H80V110H192V60H248V110H304V60H360V110H472V60H528V110H584V60H720"/>
+  <g class="dg-dots">
+    <circle cx="108" cy="110" r="3.5"/><circle cx="164" cy="110" r="3.5"/><circle cx="220" cy="60" r="3.5"/><circle cx="276" cy="110" r="3.5"/><circle cx="332" cy="60" r="3.5"/><circle cx="388" cy="110" r="3.5"/><circle cx="444" cy="110" r="3.5"/><circle cx="500" cy="60" r="3.5"/><circle cx="556" cy="110" r="3.5"/><circle cx="612" cy="60" r="3.5"/>
+  </g>
+  <text class="dg-strong" x="14" y="90">rx</text>
+  <g class="dg-small" text-anchor="middle">
+    <text x="108" y="34">0</text><text x="164" y="34">0</text><text x="220" y="34">1</text><text x="276" y="34">0</text><text x="332" y="34">1</text><text x="388" y="34">0</text><text x="444" y="34">0</text><text x="500" y="34">1</text><text x="556" y="34">0</text><text x="612" y="34">1</text>
+  </g>
+  <g text-anchor="middle">
+    <text x="108" y="138">{{ u_start }}</text><text x="164" y="138">d0</text><text x="220" y="138">d1</text><text x="276" y="138">d2</text><text x="332" y="138">d3</text><text x="388" y="138">d4</text><text x="444" y="138">d5</text><text x="500" y="138">d6</text><text x="556" y="138">d7</text><text x="612" y="138">{{ u_stop }}</text>
+  </g>
+  <g class="dg-line">
+    <path d="M80 154V160H108V154"/>
+    <path d="M108 180V186H164V180"/>
+  </g>
+  <text class="dg-small" x="116" y="162">{{ u_half }}</text>
+  <text class="dg-small" x="172" y="188">{{ u_bit }}</text>
+  <text class="dg-small" x="40" y="218">{{ u_foot }}</text>
+</svg>
+</div>
+<figcaption>{{ include.caption }}</figcaption>
+</figure>

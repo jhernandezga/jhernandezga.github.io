@@ -1,0 +1,25 @@
+---
+layout: null
+permalink: /sitemap.xml
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{% assign pages = site.pages | where_exp: "p", "p.sitemap != false" | where_exp: "p", "p.title" %}
+{% for p in pages %}{% unless p.url contains '404' %}
+  <url>
+    <loc>{{ p.url | absolute_url }}</loc>
+    <lastmod>{{ p.updated | default: site.time | date_to_xmlschema }}</lastmod>
+{% if p.translation %}    <xhtml:link rel="alternate" hreflang="{{ p.lang | default: 'en' }}" href="{{ p.url | absolute_url }}"/>
+    <xhtml:link rel="alternate" hreflang="{% if p.lang == 'es' %}en{% else %}es{% endif %}" href="{{ p.translation | absolute_url }}"/>
+{% endif %}  </url>
+{% endunless %}{% endfor %}
+{% for d in site.documents %}{% unless d.published == false %}
+  <url>
+    <loc>{{ d.url | absolute_url }}</loc>
+    <lastmod>{{ d.updated | default: d.date | date_to_xmlschema }}</lastmod>
+{% if d.translation %}    <xhtml:link rel="alternate" hreflang="{{ d.lang | default: 'en' }}" href="{{ d.url | absolute_url }}"/>
+    <xhtml:link rel="alternate" hreflang="{% if d.lang == 'es' %}en{% else %}es{% endif %}" href="{{ d.translation | absolute_url }}"/>
+{% endif %}  </url>
+{% endunless %}{% endfor %}
+</urlset>

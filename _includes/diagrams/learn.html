@@ -1,0 +1,51 @@
+{% if include.lang == 'es' %}{% assign d_views = '64 vistas' %}{% assign d_layer = 'capa' %}{% assign d_one = 'una capa' %}{% assign d_title = 'Diagrama de la red LEARN desenrollada: 30 capas, cada una combina un paso de fidelidad a los datos y un regularizador CNN.' %}{% else %}{% assign d_views = '64 views' %}{% assign d_layer = 'layer' %}{% assign d_one = 'one layer' %}{% assign d_title = 'Diagram of the unrolled LEARN network: 30 layers, each combining a data-fidelity step and a CNN regularizer.' %}{% endif %}
+<figure class="diagram">
+<div class="diagram-scroll">
+<svg viewBox="0 0 760 320" role="img" aria-label="{{ d_title }}">
+  <defs><marker id="dg-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L8 4L0 8Z" class="dg-head"/></marker></defs>
+  <g class="dg-line">
+    <path d="M110 38H138" marker-end="url(#dg-arrow)"/><path d="M200 38H228" marker-end="url(#dg-arrow)"/>
+    <path d="M310 38H328" marker-end="url(#dg-arrow)"/><path d="M410 38H428" marker-end="url(#dg-arrow)"/>
+    <path d="M462 38H478" marker-end="url(#dg-arrow)"/><path d="M560 38H588" marker-end="url(#dg-arrow)"/>
+  </g>
+  <rect class="dg-box" x="10" y="20" width="100" height="36"/><text x="60" y="42" text-anchor="middle">y · {{ d_views }}</text>
+  <rect class="dg-box" x="140" y="20" width="60" height="36"/><text x="170" y="42" text-anchor="middle">FBP</text>
+  <text class="dg-small" x="214" y="30" text-anchor="middle">x₀</text>
+  <rect class="dg-box dg-accent" x="230" y="20" width="80" height="36"/><text x="270" y="42" text-anchor="middle">{{ d_layer }} 1</text>
+  <rect class="dg-box" x="330" y="20" width="80" height="36"/><text x="370" y="42" text-anchor="middle">{{ d_layer }} 2</text>
+  <text x="445" y="42" text-anchor="middle">···</text>
+  <rect class="dg-box" x="480" y="20" width="80" height="36"/><text x="520" y="42" text-anchor="middle">{{ d_layer }} 30</text>
+  <text class="dg-strong" x="606" y="43">x̂</text>
+
+  <path class="dg-dash" d="M270 56V110"/>
+  <rect class="dg-frame" x="20" y="110" width="720" height="200"/>
+  <text class="dg-small" x="32" y="130">{{ d_one }} · t</text>
+
+  <g class="dg-line">
+    <path d="M60 210V168H88" marker-end="url(#dg-arrow)"/>
+    <path d="M140 168H171" marker-end="url(#dg-arrow)"/>
+    <path d="M185 134V154" marker-end="url(#dg-arrow)"/>
+    <path d="M199 168H223" marker-end="url(#dg-arrow)"/>
+    <path d="M285 168H313" marker-end="url(#dg-arrow)"/>
+    <path d="M375 168H560V193" marker-end="url(#dg-arrow)"/>
+    <path d="M60 210V252H88" marker-end="url(#dg-arrow)"/>
+    <path d="M375 252H560V221" marker-end="url(#dg-arrow)"/>
+    <path d="M574 207H626" marker-end="url(#dg-arrow)"/>
+    <path d="M60 252V292H640V221" marker-end="url(#dg-arrow)"/>
+    <path d="M654 207H688" marker-end="url(#dg-arrow)"/>
+    <path d="M48 210H60"/>
+  </g>
+  <text class="dg-strong" x="36" y="214" text-anchor="middle">xₜ</text>
+  <rect class="dg-box" x="90" y="150" width="50" height="36"/><text x="115" y="172" text-anchor="middle">A</text>
+  <circle class="dg-node" cx="185" cy="168" r="13"/><text x="185" y="172" text-anchor="middle">−</text>
+  <text class="dg-small" x="185" y="128" text-anchor="middle">y</text>
+  <rect class="dg-box" x="225" y="150" width="60" height="36"/><text x="255" y="172" text-anchor="middle">FBP</text>
+  <rect class="dg-box dg-accent" x="315" y="150" width="60" height="36"/><text x="345" y="172" text-anchor="middle">× αₜ</text>
+  <rect class="dg-box dg-accent" x="90" y="234" width="285" height="36"/><text x="232" y="256" text-anchor="middle">Rₜ · conv 5×5 · 48 ch · ReLU · ×3</text>
+  <circle class="dg-node" cx="560" cy="207" r="13"/><text x="560" y="211" text-anchor="middle">+</text>
+  <circle class="dg-node" cx="640" cy="207" r="13"/><text x="640" y="211" text-anchor="middle">−</text>
+  <text class="dg-strong" x="694" y="211">xₜ₊₁</text>
+</svg>
+</div>
+<figcaption>{{ include.caption }}</figcaption>
+</figure>

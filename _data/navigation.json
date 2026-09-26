@@ -45,7 +45,7 @@
       "items": [
         {
           "key": "about",
-          "title": "About & CV",
+          "title": "About me",
           "url": "/about/",
           "icon": "about"
         }
@@ -81,7 +81,7 @@
         },
         {
           "key": "writing",
-          "title": "Artículos",
+          "title": "Escritos",
           "url": "/es/articulos/",
           "icon": "writing"
         },
@@ -98,7 +98,7 @@
       "items": [
         {
           "key": "about",
-          "title": "Sobre mí y CV",
+          "title": "Sobre mí",
           "url": "/es/sobre-mi/",
           "icon": "about"
         }
