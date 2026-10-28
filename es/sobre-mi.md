@@ -15,10 +15,6 @@ Estudié ingeniería electrónica en Bogotá, en la Universidad Nacional de Colo
 
 Hago un doctorado en la Université Paris-Saclay junto con GE HealthCare, sobre imágenes espectrales de rayos X de mama: lo que pueden decirnos las imágenes tomadas a dos energías distintas sobre la composición de una lesión. Me gusta partir de la física, de un modelo de cómo se forma la imagen, y solo después preguntarme qué puede aportar el aprendizaje. Parte del trabajo que puedo compartir está en [proyectos]({{ '/es/proyectos/' | relative_url }}).
 
-## Qué más me mantiene curioso
-
-El trabajo es solo una parte. Leo literatura y filosofía, y hay nombres que vuelven una y otra vez: Dostoievski, Kafka y Camus, y Bourdieu, cuya pregunta de dónde viene el conocimiento, y quién puede producirlo, me acompaña al laboratorio más a menudo de lo que esperaba. También me atraen los campos vecinos al mío, donde las preguntas se parecen pero las herramientas son otras.
-
 ## Sobre este sitio
 
 Un lugar personal, no solo profesional. Hay proyectos y publicaciones, pero también [escritos]({{ '/es/articulos/' | relative_url }}) sobre lo que me llama la atención y un [jardín de conocimiento]({{ '/es/jardin/' | relative_url }}) de notas de lectura, curiosidades y preguntas que siguen creciendo. Irá cambiando conmigo.

@@ -15,10 +15,6 @@ I studied electronic engineering in Bogotá, at the Universidad Nacional de Colo
 
 I am doing a PhD at Université Paris-Saclay together with GE HealthCare, on spectral X-ray imaging of the breast: what images taken at two different energies can tell us about the composition of a lesion. I like starting from the physics, from a model of how the image is formed, and only then asking what learning can add. Some of the work I can share is in [projects]({{ '/projects/' | relative_url }}).
 
-## What else keeps me curious
-
-Work is only one part of it. I read literature and philosophy, and a few names keep coming back: Dostoevsky, Kafka and Camus, and Bourdieu, whose question of where knowledge comes from, and who gets to produce it, follows me into the lab more often than I expected. I am also drawn to the fields next to mine, where the questions look familiar but the tools are different.
-
 ## About this site
 
 A personal place, not only a professional one. There are projects and papers, but also [writing]({{ '/writing/' | relative_url }}) about whatever holds my attention and a [knowledge garden]({{ '/garden/' | relative_url }}) of reading notes, curiosities and questions still growing. It will change as I do.
