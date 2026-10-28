@@ -13,7 +13,7 @@ I studied electronic engineering in Bogotá, at the Universidad Nacional de Colo
 
 ## What I do
 
-I am doing a PhD at Université Paris-Saclay together with GE HealthCare, on spectral X-ray imaging of the breast: what images taken at two different energies can tell us about the composition of a lesion. I like starting from the physics, from a model of how the image is formed, and only then asking what learning can add. Some of the work I can share is in [projects]({{ '/projects/' | relative_url }}).
+I am doing a PhD at Université Paris-Saclay together with GE HealthCare, on spectral X-ray imaging of the breast: what images taken at two different energies can tell us about the composition of a lesion. Some of the work I can share is in [projects]({{ '/projects/' | relative_url }}).
 
 ## About this site
 
