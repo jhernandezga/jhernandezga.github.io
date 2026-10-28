@@ -9,7 +9,7 @@ translation: /es/sobre-mi/
 ---
 ## Hello
 
-I studied electronic engineering in Bogotá, at the Universidad Nacional de Colombia, and came to France in 2022 to finish my studies at ENSEA. I stayed. These days I live between three languages, Spanish, English and French, and some of what I write here will come out in one or another.
+I studied electronic engineering in Bogotá, at the Universidad Nacional de Colombia, and came to France in 2022 to finish my studies at ENSEA. 
 
 ## What I do
 
