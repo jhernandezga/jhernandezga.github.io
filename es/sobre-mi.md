@@ -9,8 +9,7 @@ translation: /about/
 ---
 ## Hola
 
-Estudié ingeniería electrónica en Bogotá, en la Universidad Nacional de Colombia, y llegué a Francia en 2022 para terminar mis estudios en ENSEA. Me quedé. Hoy vivo entre tres idiomas, español, inglés y francés, y parte de lo que escriba aquí saldrá en uno u otro.
-
+Estudié ingeniería electrónica en Bogotá, en la Universidad Nacional de Colombia, y llegué a Francia en 2022 para terminar mis estudios en ENSEA. Me quedé. 
 ## Qué hago
 
 Hago un doctorado en la Université Paris-Saclay junto con GE HealthCare, sobre imágenes espectrales de rayos X de mama: lo que pueden decirnos las imágenes tomadas a dos energías distintas sobre la composición de una lesión. Me gusta partir de la física, de un modelo de cómo se forma la imagen, y solo después preguntarme qué puede aportar el aprendizaje. Parte del trabajo que puedo compartir está en [proyectos]({{ '/es/proyectos/' | relative_url }}).
